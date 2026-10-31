@@ -9,3 +9,4 @@ public/brand/
 test-results/
 playwright-report/
 *.tsbuildinfo
+blob-report/
