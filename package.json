@@ -1,0 +1,36 @@
+{
+  "name": "epos-messe-demo",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "sync-brand": "node scripts/sync-brand.mjs",
+    "predev": "npm run sync-brand",
+    "dev": "vite",
+    "prebuild": "npm run sync-brand",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "fetch-data": "node scripts/fetch-data/index.mjs",
+    "demo": "npm run build && vite preview --port 4173 --open"
+  },
+  "dependencies": {
+    "papaparse": "^5.4.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/papaparse": "^5.3.14",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.2",
+    "jsdom": "^25.0.1",
+    "typescript": "^5.6.3",
+    "vite": "^6.3.6",
+    "vitest": "^5.0.5"
+  }
+}

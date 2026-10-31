@@ -1,0 +1,15 @@
+.reset-button {
+  min-height: 48px;
+  padding: 0 calc(var(--space) * 2.5);
+  border-radius: var(--radius-chip);
+  border: 1px solid color-mix(in srgb, var(--ep-weiss) 30%, transparent);
+  background: transparent;
+  color: var(--text-on-dark);
+  font-size: calc(var(--fs-body) * 0.85);
+  font-weight: var(--fw-medium);
+}
+
+.reset-button:hover {
+  border-color: var(--ep-helltuerkis);
+  color: var(--ep-helltuerkis);
+}

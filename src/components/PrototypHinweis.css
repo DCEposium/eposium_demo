@@ -1,0 +1,6 @@
+.prototyp-hinweis {
+  margin: 0;
+  font-size: calc(var(--fs-body) * 0.75);
+  color: var(--accent-on-dark);
+  opacity: 0.9;
+}

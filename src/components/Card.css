@@ -1,0 +1,46 @@
+.card {
+  background: var(--surface);
+  color: var(--text);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-kopf {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--space) * 2);
+  padding: calc(var(--space) * 3) calc(var(--space) * 3) calc(var(--space) * 1.5);
+}
+
+.card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-chip);
+  background: var(--ep-lichtgrau);
+  flex-shrink: 0;
+}
+
+.card-titel {
+  margin: 0;
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-medium);
+}
+
+.card-inhalt {
+  padding: 0 calc(var(--space) * 3) calc(var(--space) * 2);
+  flex: 1;
+}
+
+.card-fuss {
+  padding: calc(var(--space) * 1.75) calc(var(--space) * 3);
+  background: var(--ep-helltuerkis-10);
+  color: var(--ep-dunkelblau-70);
+  font-size: calc(var(--fs-body) * 0.85);
+  font-weight: var(--fw-medium);
+}

@@ -1,0 +1,6 @@
+.kicker {
+  margin: 0;
+  color: var(--accent-on-dark);
+  font-weight: var(--fw-medium);
+  font-size: calc(var(--fs-body) * 0.95);
+}
