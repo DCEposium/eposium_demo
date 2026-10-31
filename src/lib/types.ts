@@ -56,3 +56,34 @@ export interface NormalisiertesAngebot {
   annahmen: string[];
   rohquelle: { dateiname: string; text: string };
 }
+
+export interface NichtVergleichbarHinweis {
+  feld: string;
+  hinweis: string;
+}
+
+export interface Gesamtkostenergebnis {
+  lieferantId: string;
+  bedarfsmenge: number;
+  bestellmenge: number;
+  ueberschussmenge: number;
+  stueckpreisNetto: number;
+  artikelkostenNetto: number;
+  versandkostenNetto: number;
+  zertifikatskostenNetto: number;
+  gesamtkostenNetto: number;
+  skontoEffektNetto?: number;
+  kostenJeBenoetigtemStueck: number;
+  voraussichtlichesLieferdatum: Date;
+  erreichtWunschtermin: boolean;
+  rechenweg: string[];
+  nichtVergleichbarHinweise: NichtVergleichbarHinweis[];
+}
+
+export interface GesamtkostenEingabe {
+  bedarfsmenge: number;
+  mindestGewaehrleistungMonate: number;
+  gewuenschterIncoterm: string;
+  bestelldatum: Date;
+  wunschtermin: Date;
+}

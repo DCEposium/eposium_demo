@@ -1,0 +1,22 @@
+.rechenweg {
+  margin-top: calc(var(--space) * 1.5);
+  font-size: calc(var(--fs-body) * 0.85);
+}
+
+.rechenweg summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: var(--fw-medium);
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.rechenweg-liste {
+  margin: calc(var(--space) * 1) 0 0;
+  padding-left: calc(var(--space) * 2.5);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--space) * 0.75);
+  color: var(--text);
+}

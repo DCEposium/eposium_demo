@@ -1,0 +1,44 @@
+.bedarf {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--space) * 2);
+  max-width: 44rem;
+}
+
+.bedarf-titel {
+  margin: 0;
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+  color: var(--text-on-dark);
+}
+
+.bedarf-fakten {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: calc(var(--space) * 2) calc(var(--space) * 3);
+  margin: 0 0 calc(var(--space) * 2.5);
+}
+
+.bedarf-fakten dt {
+  margin: 0 0 calc(var(--space) * 0.25);
+  font-size: calc(var(--fs-body) * 0.8);
+  color: var(--ep-dunkelblau-70);
+}
+
+.bedarf-fakten dd {
+  margin: 0;
+  font-weight: var(--fw-medium);
+}
+
+.bedarf-anforderungen-titel {
+  margin: 0 0 calc(var(--space) * 1);
+  font-weight: var(--fw-medium);
+}
+
+.bedarf-anforderungen {
+  margin: 0;
+  padding-left: calc(var(--space) * 2.5);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--space) * 0.5);
+}

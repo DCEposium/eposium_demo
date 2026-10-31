@@ -4,7 +4,7 @@ import { createContext, useContext, useMemo, useReducer, type ReactNode } from "
 // Netzwerkübertragung — siehe CLAUDE.md: "Besucherdaten: nur im Browserspeicher,
 // nicht persistieren, nicht senden. Reset löscht alles."
 
-export type Screen = "attract" | "platzhalter";
+export type Screen = "attract" | "bedarf" | "angebote" | "vergleich";
 
 interface DemoState {
   screen: Screen;

@@ -57,3 +57,30 @@ export function formatDatum(isoDatum: string): string {
   const [jahr, monat, tag] = isoDatum.split("-");
   return `${tag}.${monat}.${jahr}`;
 }
+
+/**
+ * Lokales Kalenderdatum als "YYYY-MM-DD", ohne über UTC zu gehen.
+ * `Date.toISOString()` würde in Zeitzonen vor UTC (z. B. MEZ) Mitternacht auf
+ * den Vortag verschieben — hier bewusst vermieden.
+ */
+export function zuLokalemISODatum(datum: Date): string {
+  const jahr = datum.getFullYear();
+  const monat = String(datum.getMonth() + 1).padStart(2, "0");
+  const tag = String(datum.getDate()).padStart(2, "0");
+  return `${jahr}-${monat}-${tag}`;
+}
+
+/** Date-Objekt (lokale Zeit) -> deutsches Datumsformat, z. B. 20.11.2026 */
+export function formatDatumAusDate(datum: Date): string {
+  return formatDatum(zuLokalemISODatum(datum));
+}
+
+/**
+ * "YYYY-MM-DD" -> Date um Mitternacht LOKALER Zeit. `new Date("YYYY-MM-DD")`
+ * würde als UTC-Mitternacht interpretiert, was in Zeitzonen hinter UTC den
+ * Kalendertag beim Anzeigen zurückverschieben kann — hier bewusst vermieden.
+ */
+export function parseLokalesDatum(isoDatum: string): Date {
+  const [jahr, monat, tag] = isoDatum.split("-").map(Number);
+  return new Date(jahr, monat - 1, tag);
+}

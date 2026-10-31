@@ -1,5 +1,13 @@
 import { describe, expect, it } from "vitest";
-import { parseZahl, parseErsteGanzzahl, formatEuro, formatZahl, formatDatum } from "./zahlenformat";
+import {
+  parseZahl,
+  parseErsteGanzzahl,
+  formatEuro,
+  formatZahl,
+  formatDatum,
+  parseLokalesDatum,
+  zuLokalemISODatum,
+} from "./zahlenformat";
 
 describe("parseZahl", () => {
   it("liest deutsche Schreibweise (Komma als Dezimaltrennzeichen)", () => {
@@ -41,5 +49,13 @@ describe("Formatierung (deutsch)", () => {
 
   it("formatiert ISO-Daten deutsch", () => {
     expect(formatDatum("2026-11-20")).toBe("20.11.2026");
+  });
+});
+
+describe("parseLokalesDatum / zuLokalemISODatum", () => {
+  it("bleibt beim Hin- und Herwandeln auf demselben Kalendertag (unabhängig von der Zeitzone)", () => {
+    const datum = parseLokalesDatum("2026-11-20");
+    expect(zuLokalemISODatum(datum)).toBe("2026-11-20");
+    expect(datum.getHours()).toBe(0);
   });
 });

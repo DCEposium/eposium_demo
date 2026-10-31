@@ -1,0 +1,33 @@
+.app-button {
+  min-height: 56px;
+  padding: 0 calc(var(--space) * 4);
+  border-radius: var(--radius-chip);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-medium);
+  border: 1px solid transparent;
+}
+
+.app-button--primaer {
+  background: var(--accent);
+  color: var(--ep-weiss);
+}
+
+.app-button--primaer:hover {
+  background: color-mix(in srgb, var(--accent) 85%, white);
+}
+
+.app-button--sekundaer {
+  background: transparent;
+  border-color: color-mix(in srgb, var(--ep-weiss) 30%, transparent);
+  color: var(--text-on-dark);
+}
+
+.app-button--sekundaer:hover {
+  border-color: var(--ep-helltuerkis);
+  color: var(--ep-helltuerkis);
+}
+
+.app-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

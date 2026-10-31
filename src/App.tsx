@@ -1,14 +1,29 @@
+import { useEffect } from "react";
 import { DemoProvider, useDemo } from "./state/DemoContext";
 import { Attract } from "./screens/Attract";
-import { Platzhalter } from "./screens/Platzhalter";
+import { Bedarf } from "./screens/Bedarf";
+import { AngeboteEinlesen } from "./screens/AngeboteEinlesen";
+import { Vergleich } from "./screens/Vergleich";
 
 function Bildschirm() {
   const { state } = useDemo();
+
+  // Ohne das würde ein neuer Bildschirm an der Scrollposition des vorherigen
+  // erscheinen (gleiches Dokument, kein Seitenwechsel) und der Kopfbereich
+  // könnte verdeckt sein.
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [state.screen]);
+
   switch (state.screen) {
     case "attract":
       return <Attract />;
-    case "platzhalter":
-      return <Platzhalter />;
+    case "bedarf":
+      return <Bedarf />;
+    case "angebote":
+      return <AngeboteEinlesen />;
+    case "vergleich":
+      return <Vergleich />;
   }
 }
 

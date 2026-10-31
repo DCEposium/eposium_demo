@@ -21,7 +21,7 @@ export function Attract() {
           Epos vergleicht Angebote, prüft Preise und bereitet Ihre Verhandlung vor. In 2 bis 3
           Minuten sehen Sie, wie.
         </p>
-        <button type="button" className="attract-start" onClick={() => geheZu("platzhalter")}>
+        <button type="button" className="attract-start" onClick={() => geheZu("bedarf")}>
           Demo starten
         </button>
       </main>
