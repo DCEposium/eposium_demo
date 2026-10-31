@@ -1,0 +1,19 @@
+.inaktivitaets-warnung {
+  position: fixed;
+  left: 50%;
+  bottom: calc(var(--space) * 4);
+  transform: translateX(-50%);
+  background: var(--ep-weiss);
+  color: var(--text);
+  border-radius: var(--radius-chip);
+  box-shadow: var(--shadow-card);
+  padding: calc(var(--space) * 1.5) calc(var(--space) * 3);
+  font-weight: var(--fw-medium);
+  z-index: 100;
+  max-width: min(90vw, 34rem);
+  text-align: center;
+}
+
+.inaktivitaets-warnung p {
+  margin: 0;
+}

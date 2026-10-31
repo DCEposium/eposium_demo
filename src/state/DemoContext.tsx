@@ -15,6 +15,7 @@ export type Screen =
   | "briefing"
   | "freigabe"
   | "audit"
+  | "abschluss"
   | "echtModus";
 
 interface DemoState {

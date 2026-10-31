@@ -22,7 +22,7 @@ function kurzerHash(hash: string): string {
 }
 
 export function AuditProtokoll() {
-  const { state, manipuliereAuditEintrag } = useDemo();
+  const { state, manipuliereAuditEintrag, geheZu } = useDemo();
   const [pruefErgebnis, setPruefErgebnis] = useState<PruefErgebnis | null>(null);
   const [prueftGerade, setPrueftGerade] = useState(false);
 
@@ -97,7 +97,7 @@ export function AuditProtokoll() {
           </Button>
         </div>
 
-        <Button disabled>Abschluss folgt in Meilenstein 7</Button>
+        <Button onClick={() => geheZu("abschluss")}>Zum Abschluss</Button>
       </div>
     </ScreenLayout>
   );
