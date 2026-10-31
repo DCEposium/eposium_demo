@@ -24,6 +24,9 @@ export function Attract() {
         <button type="button" className="attract-start" onClick={() => geheZu("bedarf")}>
           Demo starten
         </button>
+        <button type="button" className="attract-echtmodus-link" onClick={() => geheZu("echtModus")}>
+          Oder gleich Ihre eigene Datei testen
+        </button>
       </main>
 
       <footer className="app-header">

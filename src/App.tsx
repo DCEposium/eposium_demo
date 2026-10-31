@@ -8,6 +8,7 @@ import { PreisCheck } from "./screens/PreisCheck";
 import { Verhandlungsbriefing } from "./screens/Verhandlungsbriefing";
 import { Freigabe } from "./screens/Freigabe";
 import { AuditProtokoll } from "./screens/AuditProtokoll";
+import { EchtModus } from "./screens/EchtModus";
 
 function Bildschirm() {
   const { state } = useDemo();
@@ -36,6 +37,8 @@ function Bildschirm() {
       return <Freigabe />;
     case "audit":
       return <AuditProtokoll />;
+    case "echtModus":
+      return <EchtModus />;
   }
 }
 

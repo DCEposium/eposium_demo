@@ -14,7 +14,8 @@ export type Screen =
   | "preischeck"
   | "briefing"
   | "freigabe"
-  | "audit";
+  | "audit"
+  | "echtModus";
 
 interface DemoState {
   screen: Screen;

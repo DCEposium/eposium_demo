@@ -1,0 +1,139 @@
+.echtmodus {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--space) * 2);
+  max-width: 64rem;
+}
+
+.echtmodus-titel {
+  margin: 0;
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+  color: var(--text-on-dark);
+}
+
+.echtmodus-unterzeile {
+  margin: calc(var(--space) * -1) 0 0;
+  color: var(--text-on-dark);
+  opacity: 0.85;
+  font-size: var(--fs-h3);
+}
+
+.echtmodus-upload {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--space) * 1.5);
+  align-items: flex-start;
+}
+
+.echtmodus-dropzone {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 72px;
+  padding: 0 calc(var(--space) * 4);
+  border: 2px dashed color-mix(in srgb, var(--ep-weiss) 35%, transparent);
+  border-radius: var(--radius-card);
+  color: var(--text-on-dark);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-medium);
+  cursor: pointer;
+}
+
+.echtmodus-dropzone:hover {
+  border-color: var(--ep-helltuerkis);
+  color: var(--ep-helltuerkis);
+}
+
+.echtmodus-dropzone input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.echtmodus-dateiname {
+  margin: 0;
+  color: var(--text-on-dark);
+  font-weight: var(--fw-medium);
+}
+
+.echtmodus-hinweis {
+  margin: calc(var(--space) * -1) 0 0;
+  color: var(--text-on-dark);
+  opacity: 0.8;
+  font-size: calc(var(--fs-body) * 0.9);
+}
+
+.echtmodus-zuordnung,
+.echtmodus-ergebnis {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--space) * 1.5);
+}
+
+.echtmodus-zuordnung-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: calc(var(--space) * 1.5);
+  background: var(--surface);
+  border-radius: var(--radius-card);
+  padding: calc(var(--space) * 2.5);
+}
+
+.echtmodus-zuordnung-feld {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--space) * 0.5);
+  font-size: calc(var(--fs-body) * 0.8);
+  color: var(--ep-dunkelblau-70);
+}
+
+.echtmodus-zuordnung-feld select {
+  min-height: 48px;
+  padding: 0 calc(var(--space) * 1.25);
+  border-radius: calc(var(--radius-card) / 2);
+  border: 1px solid var(--ep-linie);
+  font-family: inherit;
+  font-size: var(--fs-body);
+  color: var(--text);
+  background: var(--ep-weiss);
+}
+
+.echtmodus-tabelle-rahmen {
+  background: var(--surface);
+  border-radius: var(--radius-card);
+  padding: calc(var(--space) * 1.5);
+  overflow-x: auto;
+}
+
+.echtmodus-tabelle {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text);
+  font-size: calc(var(--fs-body) * 0.85);
+}
+
+.echtmodus-tabelle th,
+.echtmodus-tabelle td {
+  text-align: left;
+  padding: calc(var(--space) * 1) calc(var(--space) * 1.25);
+  border-bottom: 1px solid var(--ep-linie);
+  white-space: nowrap;
+}
+
+.echtmodus-tabelle th:last-child,
+.echtmodus-tabelle td:last-child {
+  white-space: normal;
+  min-width: 18rem;
+}
+
+.echtmodus-tabelle th {
+  color: var(--ep-dunkelblau-70);
+  font-weight: var(--fw-medium);
+}
+
+.echtmodus-tabelle tr.ist-unsicher td {
+  background: var(--ep-lichtgrau);
+}
