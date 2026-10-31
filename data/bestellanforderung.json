@@ -1,0 +1,13 @@
+{
+  "_hinweis": "FIKTIVE Beispieldaten für die Messe-Demo. Firmen, Preise und Kennzahlen sind erfunden.",
+  "id": "BA-2026-0412",
+  "datum": "2026-10-26",
+  "besteller": "Beispiel Maschinenbau GmbH (fiktiv), Werk 2, Instandhaltung",
+  "artikel": "Linearführungswagen, Baugröße 25, Standard-Flansch, vorgespannt (C-Klasse, mittlere Vorspannung)",
+  "menge": 40,
+  "einheit": "Stück",
+  "wunschtermin": "2026-11-20",
+  "lieferort": "DE-44801 Bochum (fiktiv)",
+  "anforderungen": ["RoHS-konform", "Werkszeugnis 3.1 gewünscht", "Gewährleistung mindestens 24 Monate", "Lieferung DAP Werk"],
+  "budgetrahmen_netto_eur": 1800
+}

@@ -1,0 +1,58 @@
+/* Eposium Design Tokens. Quelle: Corporate Design Guide (Stand Oktober 2026).
+   Nicht abweichen. Neue Farben nur nach Abstimmung. */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("./fonts/inter-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("./fonts/inter-latin-ext-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root {
+  /* Markenfarben (HEX laut Guide) */
+  --ep-dunkelblau: #00021D;
+  --ep-tuerkis:    #047C85;
+  --ep-helltuerkis:#7DBEB7;
+  --ep-weiss:      #FFFFFF;
+  --ep-lichtgrau:  #F2F4F5;
+
+  /* Abgeleitet (nur Transparenz/Aufhellung der Markenfarben, keine neuen Farbtöne) */
+  --ep-helltuerkis-10: color-mix(in srgb, var(--ep-helltuerkis) 18%, white);
+  --ep-dunkelblau-70:  color-mix(in srgb, var(--ep-dunkelblau) 70%, white);
+  --ep-linie:          color-mix(in srgb, var(--ep-dunkelblau) 12%, white);
+
+  /* Semantik (auf Plakat: dunkler Grund, weiße Karten, helltürkise Akzente) */
+  --bg-dark:     var(--ep-dunkelblau);
+  --bg-light:    var(--ep-lichtgrau);
+  --surface:     var(--ep-weiss);
+  --text:        var(--ep-dunkelblau);
+  --text-on-dark:var(--ep-weiss);
+  --accent:      var(--ep-tuerkis);
+  --accent-on-dark: var(--ep-helltuerkis);
+
+  /* Typografie (Guide: H1 Inter Bold 65, H2 Regular 43, H3 Regular 32, Fließtext Regular 24, Basis 1920x1080).
+     Verhältnisse relativ zum Fließtext: H1 2.71, H2 1.79, H3 1.33 */
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --fs-body: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+  --fs-h3: calc(var(--fs-body) * 1.33);
+  --fs-h2: calc(var(--fs-body) * 1.79);
+  --fs-h1: calc(var(--fs-body) * 2.71);
+  --fw-regular: 400; --fw-medium: 500; --fw-bold: 700;
+
+  /* Form (aus Plakat/Anzeige: Karten mit großen Radien, Fußleiste in Helltürkis-Tint) */
+  --radius-card: 20px;
+  --radius-chip: 999px;
+  --shadow-card: 0 1px 2px rgba(0,2,29,.08), 0 8px 24px rgba(0,2,29,.10);
+  --space: 8px;
+}
+
+html { font-family: var(--font); font-size: 16px; color: var(--text); }

@@ -1,0 +1,8 @@
+{
+  "_hinweis": "FIKTIV. Keine echten Unternehmen. Namen dienen nur der Demo; Ähnlichkeiten mit echten Firmen sind zufällig und vor Messe-Einsatz zu prüfen.",
+  "lieferanten": [
+    {"id": "L-001", "name": "Nordhaus Antriebstechnik GmbH", "land": "DE", "zahlungsmoral_hinweis": "Stammlieferant seit 2019", "rahmenvertrag": true},
+    {"id": "L-002", "name": "Rheinwerk Industriebedarf KG", "land": "DE", "zahlungsmoral_hinweis": "Schneller Lieferant, kleine Mengen", "rahmenvertrag": false},
+    {"id": "L-003", "name": "Nordsee Components B.V.", "land": "NL", "zahlungsmoral_hinweis": "Neuer Lieferant, erste Anfrage 2026", "rahmenvertrag": false}
+  ]
+}
