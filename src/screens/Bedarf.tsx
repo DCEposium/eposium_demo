@@ -14,7 +14,7 @@ export function Bedarf() {
   return (
     <ScreenLayout>
       <div className="bedarf">
-        <Kicker>Schritt 1 von 3</Kicker>
+        <Kicker>Bedarf</Kicker>
         <h1 className="bedarf-titel">Was wird gebraucht?</h1>
 
         <Card titel={ba.artikel} fuss={`Bestellanforderung ${ba.id} vom ${formatDatum(ba.datum)}`}>

@@ -2,7 +2,8 @@ import type { ButtonHTMLAttributes } from "react";
 import "./Button.css";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variante?: "primaer" | "sekundaer";
+  /** "sekundaer" ist für dunklen Grund gedacht, "sekundaer-hell" für weiße Karten. */
+  variante?: "primaer" | "sekundaer" | "sekundaer-hell";
 }
 
 export function Button({ variante = "primaer", className, ...rest }: ButtonProps) {

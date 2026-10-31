@@ -5,49 +5,21 @@ import { Rechenweg } from "../components/Rechenweg";
 import { Button } from "../components/Button";
 import { ScreenLayout } from "../components/ScreenLayout";
 import { useDemo } from "../state/DemoContext";
-import { ROH_ANGEBOTE, LIEFERANTEN, BESTELLANFORDERUNG } from "../lib/demodaten";
-import {
-  normalisiereAngebotA,
-  normalisiereAngebotB,
-  normalisiereAngebotC,
-} from "../lib/parsers/angebotNormalizer";
-import { berechneGesamtkosten } from "../lib/calc/gesamtkosten";
-import { leiteVergleichsvorgabenAb } from "../lib/anforderungen";
-import { formatEuro, formatZahl, formatDatumAusDate, parseLokalesDatum } from "../lib/calc/zahlenformat";
+import { BESTELLANFORDERUNG } from "../lib/demodaten";
+import { berechneVergleichsdaten } from "../lib/vergleichsdaten";
+import { formatEuro, formatZahl, formatDatumAusDate } from "../lib/calc/zahlenformat";
 import "./Vergleich.css";
-
-function lieferantName(lieferantId: string): string {
-  return LIEFERANTEN.find((l) => l.id === lieferantId)?.name ?? lieferantId;
-}
 
 export function Vergleich() {
   const { geheZu } = useDemo();
 
-  const ergebnisse = useMemo(() => {
-    const vorgaben = leiteVergleichsvorgabenAb(BESTELLANFORDERUNG);
-    const eingabe = {
-      bedarfsmenge: BESTELLANFORDERUNG.menge,
-      mindestGewaehrleistungMonate: vorgaben.mindestGewaehrleistungMonate,
-      gewuenschterIncoterm: vorgaben.gewuenschterIncoterm,
-      bestelldatum: new Date(),
-      wunschtermin: parseLokalesDatum(BESTELLANFORDERUNG.wunschtermin),
-    };
-
-    const angebote = [
-      normalisiereAngebotA(ROH_ANGEBOTE.A.dateiname, ROH_ANGEBOTE.A.text),
-      normalisiereAngebotB(ROH_ANGEBOTE.B.dateiname, ROH_ANGEBOTE.B.text),
-      normalisiereAngebotC(ROH_ANGEBOTE.C.dateiname, ROH_ANGEBOTE.C.text),
-    ];
-
-    return angebote.map((angebot) => berechneGesamtkosten(angebot, eingabe));
-  }, []);
-
-  const guenstigsteGesamtkosten = Math.min(...ergebnisse.map((e) => e.gesamtkostenNetto));
+  const eintraege = useMemo(() => berechneVergleichsdaten(), []);
+  const guenstigsteGesamtkosten = Math.min(...eintraege.map((e) => e.ergebnis.gesamtkostenNetto));
 
   return (
     <ScreenLayout>
       <div className="vergleich">
-        <Kicker>Schritt 3 von 3</Kicker>
+        <Kicker>Vergleich</Kicker>
         <h1 className="vergleich-titel">Der Vergleich</h1>
         <p className="vergleich-unterzeile">
           Gesamtkosten für {formatZahl(BESTELLANFORDERUNG.menge, 0)} Stück, inklusive Versand und
@@ -55,9 +27,9 @@ export function Vergleich() {
         </p>
 
         <div className="vergleich-grid">
-          {ergebnisse.map((ergebnis) => (
-            <div className="vergleich-karte" key={ergebnis.lieferantId}>
-              <p className="vergleich-karte-lieferant">{lieferantName(ergebnis.lieferantId)}</p>
+          {eintraege.map(({ angebot, lieferantName, ergebnis }) => (
+            <div className="vergleich-karte" key={angebot.lieferantId}>
+              <p className="vergleich-karte-lieferant">{lieferantName}</p>
 
               <p className="vergleich-karte-summe">{formatEuro(ergebnis.gesamtkostenNetto)}</p>
               {ergebnis.gesamtkostenNetto === guenstigsteGesamtkosten && (
@@ -97,9 +69,7 @@ export function Vergleich() {
           ))}
         </div>
 
-        <Button onClick={() => geheZu("vergleich")} disabled>
-          Preis-Check folgt in Meilenstein 4
-        </Button>
+        <Button onClick={() => geheZu("preischeck")}>Preis-Check: Ist der Preis wirklich fair?</Button>
       </div>
     </ScreenLayout>
   );

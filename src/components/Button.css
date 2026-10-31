@@ -27,6 +27,17 @@
   color: var(--ep-helltuerkis);
 }
 
+.app-button--sekundaer-hell {
+  background: transparent;
+  border-color: var(--ep-linie);
+  color: var(--accent);
+}
+
+.app-button--sekundaer-hell:hover {
+  border-color: var(--accent);
+  background: var(--ep-helltuerkis-10);
+}
+
 .app-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;

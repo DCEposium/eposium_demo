@@ -4,6 +4,8 @@ import { Attract } from "./screens/Attract";
 import { Bedarf } from "./screens/Bedarf";
 import { AngeboteEinlesen } from "./screens/AngeboteEinlesen";
 import { Vergleich } from "./screens/Vergleich";
+import { PreisCheck } from "./screens/PreisCheck";
+import { Verhandlungsbriefing } from "./screens/Verhandlungsbriefing";
 
 function Bildschirm() {
   const { state } = useDemo();
@@ -24,6 +26,10 @@ function Bildschirm() {
       return <AngeboteEinlesen />;
     case "vergleich":
       return <Vergleich />;
+    case "preischeck":
+      return <PreisCheck />;
+    case "briefing":
+      return <Verhandlungsbriefing />;
   }
 }
 

@@ -134,7 +134,7 @@ export function AngeboteEinlesen() {
   return (
     <ScreenLayout>
       <div className="angebote-einlesen">
-        <Kicker>Schritt 2 von 3</Kicker>
+        <Kicker>Angebote einlesen</Kicker>
         <h1 className="angebote-einlesen-titel">Drei Angebote, drei Formate</h1>
         <p className="angebote-einlesen-unterzeile">
           Epos liest jede Datei wie sie ist und zeigt, was erkannt wurde.

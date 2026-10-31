@@ -4,20 +4,26 @@ import { createContext, useContext, useMemo, useReducer, type ReactNode } from "
 // Netzwerkübertragung — siehe CLAUDE.md: "Besucherdaten: nur im Browserspeicher,
 // nicht persistieren, nicht senden. Reset löscht alles."
 
-export type Screen = "attract" | "bedarf" | "angebote" | "vergleich";
+export type Screen = "attract" | "bedarf" | "angebote" | "vergleich" | "preischeck" | "briefing";
 
 interface DemoState {
   screen: Screen;
+  ausgewaehlterLieferantId: string | null;
 }
 
-type DemoAction = { type: "GEHE_ZU"; screen: Screen } | { type: "RESET" };
+type DemoAction =
+  | { type: "GEHE_ZU"; screen: Screen }
+  | { type: "WAEHLE_LIEFERANT_UND_GEHE_ZU"; lieferantId: string; screen: Screen }
+  | { type: "RESET" };
 
-const ANFANGSZUSTAND: DemoState = { screen: "attract" };
+const ANFANGSZUSTAND: DemoState = { screen: "attract", ausgewaehlterLieferantId: null };
 
 function reducer(state: DemoState, action: DemoAction): DemoState {
   switch (action.type) {
     case "GEHE_ZU":
       return { ...state, screen: action.screen };
+    case "WAEHLE_LIEFERANT_UND_GEHE_ZU":
+      return { ...state, screen: action.screen, ausgewaehlterLieferantId: action.lieferantId };
     case "RESET":
       return ANFANGSZUSTAND;
     default:
@@ -28,6 +34,7 @@ function reducer(state: DemoState, action: DemoAction): DemoState {
 interface DemoContextValue {
   state: DemoState;
   geheZu: (screen: Screen) => void;
+  waehleLieferantUndGeheZu: (lieferantId: string, screen: Screen) => void;
   reset: () => void;
 }
 
@@ -40,6 +47,8 @@ export function DemoProvider({ children }: { children: ReactNode }) {
     () => ({
       state,
       geheZu: (screen) => dispatch({ type: "GEHE_ZU", screen }),
+      waehleLieferantUndGeheZu: (lieferantId, screen) =>
+        dispatch({ type: "WAEHLE_LIEFERANT_UND_GEHE_ZU", lieferantId, screen }),
       reset: () => dispatch({ type: "RESET" }),
     }),
     [state]
