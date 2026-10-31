@@ -6,6 +6,8 @@ import { AngeboteEinlesen } from "./screens/AngeboteEinlesen";
 import { Vergleich } from "./screens/Vergleich";
 import { PreisCheck } from "./screens/PreisCheck";
 import { Verhandlungsbriefing } from "./screens/Verhandlungsbriefing";
+import { Freigabe } from "./screens/Freigabe";
+import { AuditProtokoll } from "./screens/AuditProtokoll";
 
 function Bildschirm() {
   const { state } = useDemo();
@@ -30,6 +32,10 @@ function Bildschirm() {
       return <PreisCheck />;
     case "briefing":
       return <Verhandlungsbriefing />;
+    case "freigabe":
+      return <Freigabe />;
+    case "audit":
+      return <AuditProtokoll />;
   }
 }
 

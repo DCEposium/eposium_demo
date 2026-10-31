@@ -11,7 +11,7 @@ import { formatEuro } from "../lib/calc/zahlenformat";
 import "./Verhandlungsbriefing.css";
 
 export function Verhandlungsbriefing() {
-  const { state, geheZu } = useDemo();
+  const { state, geheZu, protokolliereUndGeheZu } = useDemo();
   const eintraege = useMemo(() => berechneVergleichsdaten(), []);
 
   const eintrag = eintraege.find((e) => e.angebot.lieferantId === state.ausgewaehlterLieferantId);
@@ -90,7 +90,23 @@ export function Verhandlungsbriefing() {
           </p>
         </div>
 
-        <Button disabled>Freigabe folgt in Meilenstein 5</Button>
+        <Button
+          onClick={() =>
+            protokolliereUndGeheZu(
+              "Verhandlungsbriefing abgeschlossen",
+              { rolle: "System", name: "Epos" },
+              {
+                lieferantId: eintrag.angebot.lieferantId,
+                lieferantName: eintrag.lieferantName,
+                zielpreisNetto: briefing.zielpreisNetto,
+                gesamtkostenNetto: eintrag.ergebnis.gesamtkostenNetto,
+              },
+              "freigabe"
+            )
+          }
+        >
+          Weiter zur Freigabe
+        </Button>
       </div>
     </ScreenLayout>
   );

@@ -87,3 +87,20 @@ export interface GesamtkostenEingabe {
   bestelldatum: Date;
   wunschtermin: Date;
 }
+
+export type Rolle = "Einkäufer" | "Abteilungsleiter" | "System";
+
+export interface Akteur {
+  rolle: Rolle;
+  name: string;
+}
+
+export interface AuditEintrag {
+  index: number;
+  zeitstempel: string;
+  ereignis: string;
+  akteur: Akteur;
+  daten: Record<string, unknown>;
+  hashVorgaenger: string;
+  hashAktuell: string;
+}
