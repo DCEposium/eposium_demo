@@ -1,0 +1,194 @@
+{
+  "quelle": "Eurostat, Datensatz sts_inpp_m (Erzeugerpreise Industrie, monatlich)",
+  "lizenz": "CC BY 4.0, freie Weiterverwendung mit Namensnennung (Beschluss 2011/833/EU)",
+  "abgerufen_am": "2026-10-31T12:39:19.385Z",
+  "parameter": {
+    "geo": "DE",
+    "nace_r2": "MIG_CAG (Investitionsgüter, grober Branchenkontext, keine Einzelprodukt-Aufschlüsselung)",
+    "unit": "I21 (Index, 2021=100)",
+    "seit": "2023-01"
+  },
+  "hinweis": "Grober Markttrend-Kontext, kein exakter Index für Linearführungswagen. Nicht als falsche Präzision darstellen.",
+  "daten": [
+    {
+      "monat": "2023-01",
+      "index_2021_100": 110.6
+    },
+    {
+      "monat": "2023-02",
+      "index_2021_100": 111
+    },
+    {
+      "monat": "2023-03",
+      "index_2021_100": 111.5
+    },
+    {
+      "monat": "2023-04",
+      "index_2021_100": 111.9
+    },
+    {
+      "monat": "2023-05",
+      "index_2021_100": 112.1
+    },
+    {
+      "monat": "2023-06",
+      "index_2021_100": 112.5
+    },
+    {
+      "monat": "2023-07",
+      "index_2021_100": 112.8
+    },
+    {
+      "monat": "2023-08",
+      "index_2021_100": 112.9
+    },
+    {
+      "monat": "2023-09",
+      "index_2021_100": 113
+    },
+    {
+      "monat": "2023-10",
+      "index_2021_100": 113.2
+    },
+    {
+      "monat": "2023-11",
+      "index_2021_100": 113.2
+    },
+    {
+      "monat": "2023-12",
+      "index_2021_100": 113.4
+    },
+    {
+      "monat": "2024-01",
+      "index_2021_100": 114.1
+    },
+    {
+      "monat": "2024-02",
+      "index_2021_100": 114.4
+    },
+    {
+      "monat": "2024-03",
+      "index_2021_100": 114.4
+    },
+    {
+      "monat": "2024-04",
+      "index_2021_100": 114.6
+    },
+    {
+      "monat": "2024-05",
+      "index_2021_100": 114.6
+    },
+    {
+      "monat": "2024-06",
+      "index_2021_100": 114.8
+    },
+    {
+      "monat": "2024-07",
+      "index_2021_100": 115.1
+    },
+    {
+      "monat": "2024-08",
+      "index_2021_100": 115.1
+    },
+    {
+      "monat": "2024-09",
+      "index_2021_100": 115.2
+    },
+    {
+      "monat": "2024-10",
+      "index_2021_100": 115.3
+    },
+    {
+      "monat": "2024-11",
+      "index_2021_100": 115.4
+    },
+    {
+      "monat": "2024-12",
+      "index_2021_100": 115.5
+    },
+    {
+      "monat": "2025-01",
+      "index_2021_100": 116.4
+    },
+    {
+      "monat": "2025-02",
+      "index_2021_100": 116.6
+    },
+    {
+      "monat": "2025-03",
+      "index_2021_100": 116.5
+    },
+    {
+      "monat": "2025-04",
+      "index_2021_100": 116.5
+    },
+    {
+      "monat": "2025-05",
+      "index_2021_100": 116.6
+    },
+    {
+      "monat": "2025-06",
+      "index_2021_100": 116.6
+    },
+    {
+      "monat": "2025-07",
+      "index_2021_100": 116.4
+    },
+    {
+      "monat": "2025-08",
+      "index_2021_100": 116.4
+    },
+    {
+      "monat": "2025-09",
+      "index_2021_100": 116.4
+    },
+    {
+      "monat": "2025-10",
+      "index_2021_100": 116.6
+    },
+    {
+      "monat": "2025-11",
+      "index_2021_100": 116.6
+    },
+    {
+      "monat": "2025-12",
+      "index_2021_100": 116.7
+    },
+    {
+      "monat": "2026-01",
+      "index_2021_100": 117.5
+    },
+    {
+      "monat": "2026-02",
+      "index_2021_100": 117.6
+    },
+    {
+      "monat": "2026-03",
+      "index_2021_100": 117.9
+    },
+    {
+      "monat": "2026-04",
+      "index_2021_100": 118.2
+    },
+    {
+      "monat": "2026-05",
+      "index_2021_100": 118.3
+    },
+    {
+      "monat": "2026-06",
+      "index_2021_100": 118.5
+    },
+    {
+      "monat": "2026-07",
+      "index_2021_100": 118.6
+    },
+    {
+      "monat": "2026-08",
+      "index_2021_100": 118.7
+    },
+    {
+      "monat": "2026-09",
+      "index_2021_100": 118.8
+    }
+  ]
+}

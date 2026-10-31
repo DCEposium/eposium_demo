@@ -1,0 +1,22 @@
+{
+  "quelle": "Frankfurter API (frankfurter.dev), Referenzkurse u. a. aus EZB-Meldungen",
+  "lizenz": "Open Source, freie Nutzung, keine Mengenbegrenzung dokumentiert",
+  "abgerufen_am": "2026-10-31T12:39:19.571Z",
+  "parameter": {
+    "base": "EUR",
+    "symbols": [
+      "USD",
+      "GBP"
+    ]
+  },
+  "hinweis": "Im Standard-Beispieldatensatz sind alle Angebote bereits in EUR; diese Datei wird nur im Echt-/Vertiefungsmodus bei Fremdwährungs-Uploads verwendet.",
+  "daten": {
+    "amount": 1,
+    "base": "EUR",
+    "date": "2026-10-30",
+    "rates": {
+      "GBP": 0.8338,
+      "USD": 1.1172
+    }
+  }
+}

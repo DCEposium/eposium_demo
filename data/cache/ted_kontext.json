@@ -1,0 +1,83 @@
+{
+  "quelle": "TED (Tenders Electronic Daily), Amt für Veröffentlichungen der EU",
+  "lizenz": "Bekanntmachungen frei nutzbar (kommerziell/nicht-kommerziell); Metadaten CC0, redaktionelle Inhalte CC BY 4.0",
+  "abgerufen_am": "2026-10-31T12:39:18.218Z",
+  "parameter": {
+    "query": "classification-cpv=44440000 AND publication-date>=20250101",
+    "hinweis": "CPV 44440000 = Bearings, als Näherung für den Demo-Artikel Linearführungswagen"
+  },
+  "gesamtanzahl_treffer": 330,
+  "notizen": "total-value ist bei TED-Bekanntmachungen oft nicht gepflegt und wird daher nicht angezeigt.",
+  "daten": [
+    {
+      "nummer": "3657-2025",
+      "titel": "Rumänien – Lager – Rulmenti pentru vehicule, utilaje, agregate",
+      "kaeufer": "Societatea de Transport Bucuresti STB SA.",
+      "land": "ROU",
+      "datum": "2025-01-03+01:00"
+    },
+    {
+      "nummer": "7816-2025",
+      "titel": "Litauen – Lager – 27096 Guoliai (seno CVP IS Nr. 745030)",
+      "kaeufer": "AB Lietuvos geležinkeliai (PV)",
+      "land": "LTU",
+      "datum": "2025-01-08+01:00"
+    },
+    {
+      "nummer": "8376-2025",
+      "titel": "Polen – Teile und Zubehör für Fahrzeuge und deren Motoren – Przedmiotem zamówienia są sukcesywne dostawy części zamiennych, podzespołów i materiałów eksploatacyjnych do autobusów, zwanych dalej „częściami i materiałami” wraz z obsługą magazynów dla PKM Sp. z o.o. w Sosnowcu.",
+      "kaeufer": "PRZEDSIĘBIORSTWO KOMUNIKACJI MIEJSKIEJ SP. Z O. O.",
+      "land": "POL",
+      "datum": "2025-01-08+01:00"
+    },
+    {
+      "nummer": "10386-2025",
+      "titel": "Tschechien – Mechanische Ersatzteile außer Motoren und deren Ersatzteilen – Dodávky náhradních dílů pro provádění oprav autobusů a trolejbusů MHD",
+      "kaeufer": "Dopravní podnik Ostrava a.s.",
+      "land": "CZE",
+      "datum": "2025-01-08+01:00"
+    },
+    {
+      "nummer": "11254-2025",
+      "titel": "Polen – Lager – DOSTAWA PANEWEK DO SILNIKÓW TRAKCYJNYCH",
+      "kaeufer": "POLREGIO S.A.",
+      "land": "POL",
+      "datum": "2025-01-09+01:00"
+    },
+    {
+      "nummer": "12287-2025",
+      "titel": "Griechenland – Teile für Luftfahrzeuge – Διακήρυξη υπ΄αρίθμ. 16/24 του 201 ΚΕΦΑ για την Προμήθεια Υλικών PLATE WEAR, CARRIER, SLINING, SLEEVE και Λοιπών Υλικών συγκροτήματος \"LANDING GEAR (32)\" (O/N 243094)",
+      "kaeufer": "201 ΚΕΦΑ",
+      "land": "GRC",
+      "datum": "2025-01-09+01:00"
+    },
+    {
+      "nummer": "32538-2025",
+      "titel": "Bulgarien – Eisenbahn- und Straßenbahnlokomotiven und rollendes Material sowie zugehörige Teile – Доставка на консумативи за трамвайни мотриси, тролейбуси и електробуси",
+      "kaeufer": "СТОЛИЧЕН ЕЛЕКТРОТРАНСПОРТ ЕАД",
+      "land": "BGR",
+      "datum": "2025-01-16+01:00"
+    },
+    {
+      "nummer": "32604-2025",
+      "titel": "Tschechien – Lager – Dodávky ložisek - DNS",
+      "kaeufer": "Dopravní podnik hl. m. Prahy, akciová společnost",
+      "land": "CZE",
+      "datum": "2025-01-16+01:00"
+    },
+    {
+      "nummer": "44304-2025",
+      "titel": "Rumänien – Rollenlager – Ansamblu rulmenţi radiali axiali cu role conice pentru cutiile de osie ale boghiului Y32, dimensiune de ansamblu (130 x 220 x 181) mm",
+      "kaeufer": "SNTFC \"CFR CALATORI\" S.A.",
+      "land": "ROU",
+      "datum": "2025-01-22+01:00"
+    },
+    {
+      "nummer": "50027-2025",
+      "titel": "Rumänien – Rollenlager – Ansamblu rulmenţi radiali axiali cu role conice pentru cutiile de osie ale boghiului Y32, dimensiune de ansamblu (130 x 220 x 181) mm",
+      "kaeufer": "SNTFC \"CFR CALATORI\" S.A.",
+      "land": "ROU",
+      "datum": "2025-01-24+01:00"
+    }
+  ]
+}
