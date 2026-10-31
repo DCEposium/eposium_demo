@@ -14,7 +14,7 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "fetch-data": "node scripts/fetch-data/index.mjs",
-    "demo": "npm run build && vite preview --port 4173 --open"
+    "demo": "npm run build && node scripts/demo.mjs"
   },
   "dependencies": {
     "papaparse": "^5.4.1",

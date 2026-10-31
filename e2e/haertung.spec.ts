@@ -1,5 +1,14 @@
 import { test, expect } from "@playwright/test";
 
+test("Tastenkürzel Umschalt+Escape setzt zurück", async ({ page }) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "Demo starten" }).click();
+  await expect(page.getByText("Was wird gebraucht?")).toBeVisible();
+
+  await page.keyboard.press("Shift+Escape");
+  await expect(page.getByText("Was kostet Ihren Einkauf die meisten Nerven?")).toBeVisible();
+});
+
 test("läuft nach dem ersten Laden vollständig offline weiter (WLAN aus)", async ({ page, context }) => {
   await page.goto("/");
   await page.getByRole("button", { name: "Demo starten" }).click();

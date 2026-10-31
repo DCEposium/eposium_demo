@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { DemoProvider, useDemo } from "./state/DemoContext";
 import { useInaktivitaetsRuecksprung } from "./lib/useInaktivitaetsRuecksprung";
+import { useResetTastenkuerzel } from "./lib/useResetTastenkuerzel";
 import { InaktivitaetsWarnung } from "./components/InaktivitaetsWarnung";
 import { Attract } from "./screens/Attract";
 import { Bedarf } from "./screens/Bedarf";
@@ -24,6 +25,7 @@ function Bildschirm() {
   }, [state.screen]);
 
   const verbleibendeSekunden = useInaktivitaetsRuecksprung(state.screen !== "attract", reset);
+  useResetTastenkuerzel(reset);
 
   return (
     <>
